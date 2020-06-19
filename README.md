@@ -1,2 +1,2 @@
-# http://pablohsgc.gitbub.io
+# http://pablohsgc.github.io
 Blog sobre aprendizado de arduino
