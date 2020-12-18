@@ -2,25 +2,29 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width">
+        <!-- Essa tag acima faz com que a largura represente um número em pixels que o fabricante do aparelho considera como mais próximo da
+sensação que o usuário tem ao visualizar a tela.-->
         <title>Programação Arduino</title>
-	<link rel="stylesheet" href="https://pablohsgc.github.io/css/estilo.css">
-    </head>
-<body>
-        <main>
-            <header>
-            <h2>Programação Arduino</h2>
-                <nav>    
-                    <ul id="opcoes-menu">
-                        <li>Inicio</li>
-                        <li>Sintaxe Básica</li>
-                        <li>Variávies</li>
-                        <li>Estruturas de Controle</li>
-                        <li>Estruturas de Repetição</li>
-                    </ul>
+        <link rel="stylesheet" href="css/estilos.css">
+        <!--<link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/estilo2.css">-->
+	</head>
+    <body>
+        <header>
+            <a class="logo" href="#">Programação Arduino</a>
+            <button id="botao-menu">Menu</button>
+            <nav>    
+                <ul>
+                    <li><a class ="sub-menu" href="#">Inicio</a></li>
+                    <li><a class ="sub-menu" href="#">Sintaxe Básica</a></li>
+                    <li><a class ="sub-menu" href="#">Variáveis</a></li>
+                    <li><a class ="sub-menu" href="#">Estruturas de Controle</a></li>
+                    <li><a class ="sub-menu" href="#">Estruturas de Repetição</a></li>
+                </ul>
             </nav>
-            </header>
-            <h1>Programação Arduino</h1>
-            <p>Teste</p>
-        </main>
+        </header>
+
+        <div id="main"></div>
     </body>
 </html>
