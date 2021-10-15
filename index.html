@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Pablo Henrique</title>
+	<script type="text/javascript">
+		let post2 = '<article class="post"><header><h3>Post #2</h3><p id="p2_txt">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p></header></article>';
+
+		function adicionaPost(titulo,texto){
+			var postados = document.getElementById('posts').innerHTML;
+			//header está sendo redundante
+			var novo_post = '<article class="post"><header><h3>'+ titulo +'</h3><p id="p2_txt">'+ texto +'</p></header></article>'; 
+			document.getElementById('posts').innerHTML = postados + novo_post;
+		}
+	</script>
+</head>
+<body>
+	<header id="header-principal">
+		<img id="foto-perfil" src="foto_eu.PNG" alt="Foto de perfil para teste">
+		<h1>Pablo Henrique</h1>
+		<span id="span-descricao">Engenheiro de Computação</span>
+	</header>
+	<section id="posts">
+		<header>
+			<h2>Sites</h2>
+		</header>
+		<article class="post">
+			<header>
+				<h3>Site #1</h3>
+				<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+			</header>
+		</article>
+		<article class="post">
+			<header>
+				<h3>Jogo Genius</h3>
+				<p>Este é um projeto feito, para aplicar os conhecimentos em HTML,CSS e Java Script. O projeto é uma adaptação de um projeto prático, fornecido em um curso da Digital Innovation One. O projeto pode ser acessado por <a href="https://pablohsgc.github.io/Jogo-Genius/">aqui</a>, acesse e divirta-se.</p>
+			</header>
+		</article>
+	</section>
+</body>
+</html>
