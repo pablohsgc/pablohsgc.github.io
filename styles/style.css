@@ -53,3 +53,25 @@ p{
 	margin: 10px;
 	border-radius: 20px;
 }
+
+/*.catalogo-repositorios{
+	margin: auto;
+	padding-left: 10%;
+	padding-right: 10%;
+}*/
+
+.repositorio{
+	background: #ADD;
+	padding: 10px;
+	border: 3px solid #000;
+	margin: 10px;
+	border-radius: 20px;
+}
+
+a{
+	text-align: center;
+}
+
+.btn-site{
+	padding-left:5px;
+}
