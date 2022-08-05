@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Pablo Henrique</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/repositorios.css">
+    <link rel="stylesheet" href="./css/menu-navegacao.css">
+    <link rel="stylesheet" href="./css/rodape.css">
+</head>
+<body>
+    <header>
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="./index.html">Apresentação</a></li>
+                <li><a href="./repositórios.html">Repositórios</a></li>
+                <li><a href="./projetos.html">Projetos</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header class="cabecalho-pagina-repositorios">
+            <h2>Repositórios do GitHub</h2>
+            <p>Esta página é feita para listar de forma mais organizada, meus repositórios do github, utilizando java script para filtrar os repositórios, pelos seus respectivos tópicos.</p>
+            <p>É mostrado o nome do repositório, uma breve descrição, todos os tópicos abordados nesse repositório e também um link para acesso a esse respectivo repositóio no GitHub.</p>
+            <p>Quer saber mais sobre meu repositório? Navegue pela lista abaixo ou altere a opção do filtro para uma opção desejada.</p>
+            <div class="area-filtro-repositorios">
+                <label class="label-filtro-repositorios">
+                    <span>Filtrar por:</span> 
+                    <select id="select-topico-repositorio">
+                        <option value="backend">Back-End</option>
+                        <option value="frontend">Front-End</option>
+                        <option value="game">Game</option>
+                        <option value="java">Java</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="todos" selected>Nenhum</option>
+                        <option value="nodejs">NodeJs</option>
+                        <option value="python">Python</option>
+                        <option value="springboot">Spring-Boot</option>
+                    </select>
+                </label>
+            </div>
+        </header>
+
+        <section id="secao-repositorios">
+            <div id="lista-repositorios">
+                <h2 style="color:red">Carregando ...</h2>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-pagina">
+        <div class="area-info-rodape"><p>Feito por Pablo Henrique Santos - 2022</p></div>
+        <div class="area-links-rodape">
+            <a href="mailto:pablohsgc@gmail.com">
+                <i class="fa fa-envelope icone-rodape"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pablo-henrique-5975aa1b5/">
+                <i class="fab fa-linkedin icone-rodape"></i>
+            </a>
+            <a href="https://github.com/pablohsgc">
+                <i class="fab fa-github icone-rodape"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/repositorios.js"></script>
+    <script src="https://kit.fontawesome.com/7ee3052bb4.js" crossorigin="anonymous"></script>
+</body>
+</html>
