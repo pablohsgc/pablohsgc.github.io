@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dev Portfolio</title>
-    <meta name="description" content="Developer Portfolio Showcase" />
+    <title>Repositórios - Dev Portfolio</title>
+    <meta name="description" content="GitHub Repositories Showcase" />
     <meta name="author" content="Developer" />
 
-    <meta property="og:title" content="Dev Portfolio" />
-    <meta property="og:description" content="Developer Portfolio Showcase" />
+    <meta property="og:title" content="Repositórios - Dev Portfolio" />
+    <meta property="og:description" content="GitHub Repositories Showcase" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -26,8 +25,8 @@
             
             <!-- Desktop menu -->
             <div class="navbar-menu desktop-menu">
-              <a href="index.html" class="navbar-link active">Apresentação</a>
-              <a href="repositories.html" class="navbar-link">Repositórios</a>
+              <a href="index.html" class="navbar-link">Apresentação</a>
+              <a href="repositories.html" class="navbar-link active">Repositórios</a>
               <a href="#projects" class="navbar-link">Projetos</a>
               <a href="#footer" class="navbar-link">Contato</a>
             </div>
@@ -57,55 +56,73 @@
         </div>
       </nav>
 
-    
+      <!-- Main Content -->
       <main>
-        <section id="home" class="hero-section">
-          <div class="container">
-            <div class="hero-content">
-              <h2 class="hero-subtitle animate-fade-in">Olá! 👋 Eu sou Pablo Henrique Santos</h2>
-              <h1 class="hero-title animate-fade-in">
-                <span class="highlight">Desenvolvedor Full-Stack</span>
-              </h1>
-              <p class="hero-description animate-fade-in">
-                Sou desenvolvedor Full-Stack, com conhecimentos em diversas linguagens de programação e frameworks. Estou sempre em busca de novos desafios e oportunidades para crescer e aprender.
-              </p>
-              <div class="hero-buttons animate-fade-in">
-                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                <a href="#contact" class="btn btn-outline">Contato</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        
-        <section class="repositories-section">
+        <!-- Repositories Section -->
+        <section class="repositories-page">
           <div class="container">
             <div class="section-header">
-              <h2 class="section-title">
-                <span class="highlight">Repositórios em Destaque</span>
-              </h2>
+              <h1 class="section-title">
+                <span class="highlight">Repositórios GitHub</span>
+              </h1>
               <p class="section-description">
-                Uma seleção dos meus principais projetos no GitHub.
+                Lista de repositórios públicos consumidos diretamente da API do GitHub.
               </p>
             </div>
-
-            <div class="view-all-link">
-              <a href="repositories.html" class="btn btn-link">
-                Ver todos os repositórios
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
+            
+            <div class="filter-section">
+              <div class="filter-header">
+                <div class="filter-label">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-filter">
+                    <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"></path>
+                  </svg>
+                  <h2>Filtrar por Tópico:</h2>
+                </div>
+                
+                <div class="filter-controls">
+                  <div class="topic-select-container">
+                    <select id="topic-select" class="topic-select">
+                      <option value="all">Todos os tópicos</option>
+                      <!-- Topics will be added here by JavaScript -->
+                    </select>
+                  </div>
+                  
+                  <div class="view-toggle">
+                    <button class="view-toggle-btn active" data-view="grid">Grade</button>
+                    <button class="view-toggle-btn" data-view="list">Lista</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div id="active-filter" class="active-filter hidden">
+                <span>Filtro ativo:</span>
+                <div class="filter-badge">
+                  <span id="active-filter-name"></span>
+                  <button id="clear-filter" class="clear-filter-btn">✕</button>
+                </div>
+              </div>
             </div>
 
-            <div class="repositories-grid" id="featured-repos">
-             
+            <!-- Loading state -->
+            <div id="loading-repos" class="loading-repos">
+              <div class="loading-grid"></div>
             </div>
+
+            <!-- Empty state -->
+            <div id="empty-repos" class="empty-repos hidden">
+              <p>Nenhum repositório encontrado com o tópico selecionado.</p>
+            </div>
+            
+            <!-- Repositories Grid View -->
+            <div id="repos-grid" class="repositories-grid"></div>
+            
+            <!-- Repositories List View -->
+            <div id="repos-list" class="repositories-list hidden"></div>
           </div>
         </section>
       </main>
 
+      <!-- Footer -->
       <footer class="footer" id="footer">
         <div class="container">
           <div class="footer-content">
@@ -128,6 +145,6 @@
     <script src="https://kit.fontawesome.com/7ee3052bb4.js" crossorigin="anonymous"></script>
     <script src="js/createReporCard.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/repositories.js"></script>
   </body>
 </html>
